@@ -1,0 +1,35 @@
+<mybooks>
+    <mybooks>
+        <title>The Prophets</title>
+        <authors>
+            <author>Robert Jones Jr.</author>
+        </authors>
+        <genre>Historical Fiction</genre>
+        <publisher>G.P. Putnam's Sons</publisher>
+        <publicationDate>2021-01-05</publicationDate>
+        <quantity>10</quantity>
+        <price>27.00</price>
+    </mybooks>
+    <mybooks>
+        <title>Black Buck</title>
+        <authors>
+            <author>Mateo Askaripour</author>
+        </authors>
+        <genre>Satire</genre>
+        <publisher>Houghton Mifflin Harcourt</publisher>
+        <publicationDate>2021-01-05</publicationDate>
+        <quantity>15</quantity>
+        <price>26.00</price>
+    </mybooks>
+    <mybooks>
+        <title>The Final Revival of Opal & Nev</title>
+        <authors>
+            <author>Dawnie Walton</author>
+        </authors>
+        <genre>Historical Fiction</genre>
+        <publisher>37 Ink</publisher>
+        <publicationDate>2021-03-30</publicationDate>
+        <quantity>8</quantity>
+        <price>28.00</price>
+    </mybooks>
+</mybooks>

@@ -17,53 +17,56 @@ public class UserGUI extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("User Login");
 
-        // input fields for user info
+        // initializing  fields for user info
         email = new TextField();
         passwordInput = new PasswordField();
         passwordLabel = new Label("Password: ****");
         login = new Button("Login");
 
-        // login action
-        login.setOnAction(e -> handleLogin());
+        // action set for login button
+        login.setOnAction(e -> handleLogin(primaryStage));
 
-        // grid layout
         GridPane grid = new GridPane();
         grid.setPadding(new Insets(10));
         grid.setVgap(8);
         grid.setHgap(10);
 
-        // labels and input fields to rid
         grid.add(new Label("Email:"), 0, 0);
         grid.add(email, 1, 0);
         grid.add(new Label("Password:"), 0, 1);
         grid.add(passwordInput, 1, 1);
         grid.add(login, 1, 3);
 
-        // scene creation
         Scene scene = new Scene(grid, 300, 150);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    private void handleRevealPassword() {
-        // show password label
-        passwordLabel.setText("Password: " + passwordInput.getText());
-    }
+    private void handleLogin(Stage primaryStage) {
 
-    private void handleLogin() {
-        // user info for login
+        //setting user info for login
         User user = new User();
-        user.setFirstName("asia");
-        user.setLastName("autrey");
+        user.setFirstName("Asia");
+        user.setLastName("Autrey");
         user.setEmail("asia.autrey@gmail.com");
         user.setPassword("password123");
 
-        // login validation
+        // validating if info entered for login matches set user info
         if (user.getEmail().equals(email.getText()) && user.getPassword().equals(passwordInput.getText())) {
             showAlert("Logged in", "Welcome " + user.getFirstName() + "!");
+            navigateToAccount(primaryStage);
         } else {
-            showAlert("Uh oh", "Wrong combination of password and username.");
+            showAlert("Uh oh", "Password or Username incorrect! Try again.");
         }
+    }
+
+    private void navigateToAccount(Stage primaryStage) {
+        // initializing instance of account gui to naviagte when successfully logged in
+        AccountGUI accountGUI = new AccountGUI();
+
+        // display account stage
+        Stage accountStage = new Stage();
+        accountGUI.start(accountStage);
     }
 
     private void showAlert(String title, String message) {
@@ -73,8 +76,8 @@ public class UserGUI extends Application {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
     public static void main(String[] args) {
         launch(args);
     }
-
 }

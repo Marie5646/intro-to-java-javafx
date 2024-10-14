@@ -77,7 +77,7 @@ public class Claim {
     }
 
     public static void main(String[] args) {
-        //Claim
+        // claim
         Claim claim = new Claim();
         claim.setClaimId(1);
         claim.setDescription("Claim for car accident");
@@ -86,19 +86,19 @@ public class Claim {
         claim.setDateSubmitted(new Date());
         claim.setStatus("Pending");
 
-        //User to represent the assigned manager
+        // user to represent the assigned manager
         User manager = new User();
         manager.setFirstName("Alissa");
         manager.setLastName("Smith");
         claim.setAssignedManager(manager);
 
-        //User to represent the customer
+        // user/customer initialized
         User customer = new User();
         customer.setFirstName("Connie");
         customer.setLastName("Sims");
         claim.setCustomer(customer);
 
-        //Claim details
+        // claim details
         System.out.println("Claim");
         System.out.println("Claim ID - " + claim.getClaimId());
         System.out.println("Description - " + claim.getDescription());

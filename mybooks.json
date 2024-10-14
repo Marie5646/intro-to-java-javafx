@@ -1,0 +1,31 @@
+{
+  "books": [
+    {
+      "title": "The Prophets",
+      "authors": ["Robert Jones Jr."],
+      "genre": "Historical Fiction",
+      "publisher": "G.P. Putnam's Sons",
+      "publicationDate": "2021-01-05",
+      "quantity": 10,
+      "price": 27.00
+    },
+    {
+      "title": "Black Buck",
+      "authors": ["Mateo Askaripour"],
+      "genre": "Satire",
+      "publisher": "Houghton Mifflin Harcourt",
+      "publicationDate": "2021-01-05",
+      "quantity": 15,
+      "price": 26.00
+    },
+    {
+      "title": "The Final Revival of Opal & Nev",
+      "authors": ["Dawnie Walton"],
+      "genre": "Historical Fiction",
+      "publisher": "37 Ink",
+      "publicationDate": "2021-03-30",
+      "quantity": 8,
+      "price": 28.00
+    }
+  ]
+}

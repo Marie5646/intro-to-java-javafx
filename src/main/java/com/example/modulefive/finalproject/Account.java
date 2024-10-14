@@ -8,6 +8,10 @@ public class Account {
     private String coverageTier;
     private User user;
 
+    public Account() {
+        claims = new ArrayList<>();
+    }
+
     public long getAccountId() {
         return accountId;
     }
@@ -22,11 +26,16 @@ public class Account {
 
     public void setClaims(ArrayList<Claim> claims) {
         this.claims = claims;
+
+    }
+    public void addClaim(Claim claim) {
+        claims.add(claim);
     }
 
     public String getCoverageTier() {
         return coverageTier;
     }
+
 
     public void setCoverageTier(String coverageTier) {
         this.coverageTier = coverageTier;
